@@ -1,4 +1,4 @@
 [sandbox]
-olxid-sandbox-0	ansible_host="54.254.253.118"
-olxid-sandbox-1	ansible_host="54.255.193.2"	ansible_python_interpreter="/usr/bin/python3"
-olxid-sandbox-2	ansible_host="52.221.247.135"	ansible_python_interpreter="/usr/bin/python3"
+sandbox-0	ansible_host="54.254.253.118"
+sandbox-1	ansible_host="54.255.193.2"	ansible_python_interpreter="/usr/bin/python3"
+sandbox-2	ansible_host="52.221.247.135"	ansible_python_interpreter="/usr/bin/python3"
