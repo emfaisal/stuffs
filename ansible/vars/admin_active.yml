@@ -1,0 +1,7 @@
+#key_files: /home/ubuntu/ansible/vars/admin_active_pub
+#
+users_active:
+  - efaisal
+  - wasis
+  - khairul
+  - heriyanto 

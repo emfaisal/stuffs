@@ -1,0 +1,41 @@
+---
+- hosts: olxid-sandbox-1
+  become: yes
+  vars_files:
+  -  vars/admin_active.yml
+  -  vars/admin_inactive.yml
+
+  tasks:
+  - name: create user(s)
+    user: name={{ item }} shell=/bin/bash groups=admin,sudo
+    with_items: "{{ users_active }}"
+
+  - name: Set authorized key took from file - efaisal
+    authorized_key:
+      user: efaisal
+      key: "{{ lookup('file', '/home/ubuntu/ansible/files/public_keys/efaisal.pub') }}"
+  - name: Set authorized key took from file - wasis
+    authorized_key:
+      user: wasis
+      key: "{{ lookup('file', '/home/ubuntu/ansible/files/public_keys/wasis.pub') }}"
+  - name: Set authorized key took from file - khairul
+    authorized_key:
+      user: khairul
+      key: "{{ lookup('file', '/home/ubuntu/ansible/files/public_keys/khairul.pub') }}"
+  - name: Set authorized key took from file - heriyanto
+    authorized_key:
+      user: heriyanto
+      key: "{{ lookup('file', '/home/ubuntu/ansible/files/public_keys/heriyanto.pub') }}"
+  
+#  - name: This guy no longer with the company - harun
+#    user:
+#      name: harun
+#      shell: /bin/false
+#  - name: This guy no longer with the company - ludwig
+#    user:
+#      name: ludwig
+#      shell: /bin/false
+#  - name: This guy no longer with the company - dado
+#    user:
+#      name: dado
+#      shell: /bin/false

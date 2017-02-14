@@ -1,0 +1,6 @@
+#key_files: /home/ubuntu/ansible/vars/admin_inactive_pub
+#
+users_inactive:
+  - harun
+  - ludwig
+  - dado
